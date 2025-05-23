@@ -31,14 +31,14 @@ Raspberry Piを搭載したラジコンカーが、コース上を自動走行�
 ## 機能・仕様 / Features
 
 - 学習させたコースをラジコンカーが自動で一周
-- コース上の「Uber Eats」ロゴを検出したら車体が自動で停止:contentReference[oaicite:1]{index=1}
+- コース上の「Uber Eats」ロゴを検出したら車体が自動で停止
 
 ---
 
 ## 技術スタック / Tech Stack
 
 - **分類モデル:** Python, TensorFlow, Numpy, Matplotlib（Google Colab環境）
-- **物体検出モデル:** Python, PyTorch, YOLOv5, Matplotlib, Pandas（Google Colab環境）【18:7,11†KyojiAWAKI_portfolio.pdf】
+- **物体検出モデル:** Python, PyTorch, YOLOv5, Matplotlib, Pandas（Google Colab環境）
 
 ---
 
@@ -46,7 +46,7 @@ Raspberry Piを搭載したラジコンカーが、コース上を自動走行�
 
 - 分類モデル：  
   - train：Straight(2058枚), Right(10173枚), Left(1377枚)
-  - val/test 各クラス有:contentReference[oaicite:2]{index=2}
+  - val/test 各クラス有:
 - 物体検出モデル：  
   - train：画像61枚・ラベル61枚
 
@@ -57,7 +57,7 @@ Raspberry Piを搭載したラジコンカーが、コース上を自動走行�
 ### 分類モデル
 - CNN構成（Conv2D, MaxPooling, Dense, Softmax）
 - 入力：32×32画像  
-- 出力：Straight/Right/Left の3クラス分類:contentReference[oaicite:3]{index=3}
+- 出力：Straight/Right/Left の3クラス分類
 
 ### 物体検出モデル
 - YOLOv5による転移学習
@@ -68,20 +68,19 @@ Raspberry Piを搭載したラジコンカーが、コース上を自動走行�
 
 ### 分類モデル
 - Loss: 0.10 / Accuracy: 0.96
-- テスト精度: Straight 86%、Right 97%、Left 50%:contentReference[oaicite:4]{index=4}
-
+- テスト精度: Straight 86%、Right 97%、Left 50%
 ### 物体検出モデル
 - Loss: 0.02 / Accuracy: 0.89
-- stop_obj（停止対象物）認識精度: 0.92、その他: 0.58:contentReference[oaicite:5]{index=5}
+- stop_obj（停止対象物）認識精度: 0.92、その他: 0.58
 
 ---
 
 ## デモ / Demo
 
 - 自動走行のデモ  
-  ![自動走行デモ](./images/auto_drive_demo.png)
+  ![自動走行デモ](./demo/auto.mp4)
 - 車体停止のデモ  
-  ![停止デモ](./images/stop_demo.png)
+  ![停止デモ](./demo/detect.mp4)
 
 ---
 
@@ -91,13 +90,7 @@ Raspberry Piを搭載したラジコンカーが、コース上を自動走行�
 - モデルの中間層追加による性能向上
 - タイヤ摩擦向上のため物理対策（輪ゴム追加）
 - YOLOv5転移学習の適用と、ラベル付けルールの明確化
-- カメラ設置角度による誤検出防止:contentReference[oaicite:6]{index=6}
-
----
-
-## コード / Code
-
-- [GitHubリポジトリ](https://github.com/kyojiawaki/Autonomous-Driving.git)
+- カメラ設置角度による誤検出防止
 
 ---
 
