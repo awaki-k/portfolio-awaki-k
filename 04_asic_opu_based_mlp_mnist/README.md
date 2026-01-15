@@ -19,3 +19,28 @@
     - 仕様設計・見積もりの大切さを身に染みて感じた。
     - プロセスノード依存になると思うので、ここら辺の感覚は経験がないと身につかないものなのかも。
   - 
+
+
+- githubの勉強
+  - pushのやり方（コピペでOK）
+    ```
+    # 1. 現在の状態を一旦退避（念のため）
+    git status
+    
+    # 2. main を完全初期化
+    git checkout --orphan temp-clean
+    
+    # 3. 追跡したいものだけ add（.gitignore を先に）
+    git add .gitignore
+    git add 04_asic_opu_based_mlp_mnist
+    
+    # 4. 初回コミットとして作り直す
+    git commit -m "Add ASIC OPU-based MLP MNIST project (clean)"
+    
+    # 5. main を置き換え
+    git branch -D main
+    git branch -m main
+    
+    # 6. 強制 push（GitHub 側は安全）
+    git push -f origin main
+    ```
