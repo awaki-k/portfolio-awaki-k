@@ -1,0 +1,581 @@
+Scheduler report for : proc
+---------------------------
+
+Op                    SID(BB;Clocked)  Pipeline Stage  IS     SRCLOC
+--                    ---------------  --------------  --     ------
+
+img                   3 (1:TRUE)       --              FALSE  qcnn.cc,l:25,c:13
+
+outvalid              7 (5:FALSE)      --              FALSE  qcnn.h,l:14,c:18 -> f:qcnn.cc,l:451,c:9
+
+outdata               7 (5:FALSE)      --              FALSE  qcnn.h,l:15,c:22 -> f:qcnn.cc,l:452,c:9
+
+img                   9 (7:FALSE)      --              FALSE  qcnn.cc,l:25,c:13 -> l:456,c:5
+
+block1_out            9 (7:FALSE)      --              FALSE  qcnn.cc,l:482,c:17
+
+conv1_weight          9 (7:FALSE)      --              FALSE  qcnn.cc,l:26,c:26 -> l:456,c:5
+
+block2_out            9 (7:FALSE)      --              FALSE  qcnn.cc,l:533,c:17
+
+conv2_weight          9 (7:FALSE)      --              FALSE  qcnn.cc,l:51,c:26 -> l:456,c:5
+
+fc1_out               9 (7:FALSE)      --              FALSE  qcnn.cc,l:583,c:17
+
+fc1_weight            9 (7:FALSE)      --              FALSE  qcnn.cc,l:436,c:26 -> l:456,c:5
+
+start                 10 (8:FALSE)     --              FALSE  qcnn.h,l:12,c:17 -> f:qcnn.cc,l:461,c:20
+
+start                 16 (12:TRUE)     --              FALSE  qcnn.h,l:12,c:17
+
+h                     15 (9:FALSE)     --              FALSE  qcnn.cc,l:468,c:26 -> c:28
+
+img                   21 (16:FALSE)    --              FALSE  qcnn.cc,l:25,c:13 -> l:468,c:17
+
+h                     21 (16:FALSE)    --              FALSE  qcnn.cc,l:468,c:26 -> c:44
+
+w                     21 (16:FALSE)    --              FALSE  qcnn.cc,l:470,c:30 -> c:32
+
+                      21 (16:FALSE)    --              FALSE  f:qcnn.cc,l:468,c:45
+
+img                   21 (16:FALSE)    --              FALSE  qcnn.cc,l:25,c:13 -> l:472,c:35
+
+img                   22 (17:FALSE)    --              FALSE  qcnn.cc,l:25,c:13 -> l:472,c:35
+
+w                     22 (17:FALSE)    --              FALSE  qcnn.cc,l:470,c:30 -> c:48
+
+                      22 (17:FALSE)    --              FALSE  f:qcnn.cc,l:470,c:49
+
+indata                22 (17:FALSE)    --              FALSE  qcnn.h,l:13,c:20 -> f:qcnn.cc,l:472,c:41
+
+img                   22 (17:FALSE)    --              FALSE  qcnn.cc,l:25,c:13 -> l:472,c:35
+
+img                   22 (17:FALSE)    --              TRUE   qcnn.cc,l:25,c:13 -> l:472,c:35
+
+f:qcnn.cc,l:470,c:41  23 (18:TRUE)     --              FALSE  & c:39
+
+f:qcnn.cc,l:468,c:37  25 (20:FALSE)    --              FALSE  & c:35
+
+oc                    28 (23:TRUE)     --              FALSE  qcnn.cc,l:484,c:18 -> c:21
+
+block1_out            28 (23:TRUE)     --              FALSE  qcnn.cc,l:482,c:17
+
+block2_out            28 (23:TRUE)     --              FALSE  qcnn.cc,l:533,c:17
+
+fc1_out               28 (23:TRUE)     --              FALSE  qcnn.cc,l:583,c:17
+
+pi                    29 (24:FALSE)    --              FALSE  qcnn.cc,l:486,c:22 -> c:25
+
+img                   29 (24:FALSE)    --              FALSE  qcnn.cc,l:25,c:13 -> l:484,c:9
+
+block1_out            29 (24:FALSE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:484,c:9
+
+oc                    29 (24:FALSE)    --              FALSE  qcnn.cc,l:484,c:18 -> c:45
+
+conv1_weight          29 (24:FALSE)    --              FALSE  qcnn.cc,l:26,c:26 -> l:484,c:9
+
+                      29 (24:FALSE)    --              FALSE  f:qcnn.cc,l:484,c:47
+
+pj                    30 (25:FALSE)    --              FALSE  qcnn.cc,l:488,c:26 -> c:29
+
+img                   30 (25:FALSE)    --              FALSE  qcnn.cc,l:25,c:13 -> l:486,c:13
+
+block1_out            30 (25:FALSE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:486,c:13
+
+pi                    30 (25:FALSE)    --              FALSE  qcnn.cc,l:486,c:22 -> c:49
+
+conv1_weight          30 (25:FALSE)    --              FALSE  qcnn.cc,l:26,c:26 -> l:486,c:13
+
+pi_offset             31 (26:FALSE)    --              FALSE  qcnn.cc,l:491,c:30 -> c:40
+
+max_val               31 (26:FALSE)    --              FALSE  qcnn.cc,l:490,c:29
+
+img                   31 (26:FALSE)    --              FALSE  qcnn.cc,l:25,c:13 -> l:488,c:17
+
+block1_out            31 (26:FALSE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:526,c:39
+
+pj                    31 (26:FALSE)    --              FALSE  qcnn.cc,l:488,c:26 -> c:53
+
+conv1_weight          31 (26:FALSE)    --              FALSE  qcnn.cc,l:26,c:26 -> l:488,c:17
+
+pj_offset             32 (27:FALSE)    --              FALSE  qcnn.cc,l:493,c:34 -> c:44
+
+img                   32 (27:FALSE)    --              FALSE  qcnn.cc,l:25,c:13 -> l:491,c:21
+
+max_val               32 (27:FALSE)    --              FALSE  qcnn.cc,l:490,c:29 -> l:491,c:21
+
+pi_offset             32 (27:FALSE)    --              FALSE  qcnn.cc,l:491,c:30 -> c:63
+
+conv1_weight          32 (27:FALSE)    --              FALSE  qcnn.cc,l:26,c:26 -> l:491,c:21
+
+i                     32 (27:FALSE)    --              FALSE  qcnn.cc,l:495,c:33 -> c:35
+
+f:qcnn.cc,l:497,c:37  32 (27:FALSE)    --              FALSE  & c:35
+
+img                   33 (28:FALSE)    --              FALSE  qcnn.cc,l:25,c:13 -> l:493,c:25
+
+max_val               33 (28:FALSE)    --              FALSE  qcnn.cc,l:490,c:29 -> l:521,c:33
+
+pj_offset             33 (28:FALSE)    --              FALSE  qcnn.cc,l:493,c:34 -> c:67
+
+conv1_weight          33 (28:FALSE)    --              FALSE  qcnn.cc,l:26,c:26 -> l:493,c:25
+
+j                     33 (28:FALSE)    --              FALSE  qcnn.cc,l:496,c:33 -> c:35
+
+f:qcnn.cc,l:497,c:50  33 (28:FALSE)    --              FALSE  & c:48
+
+                      33 (28:FALSE)    --              FALSE  f:qcnn.cc,l:497,c:43
+
+acc                   33 (28:FALSE)    --              FALSE  qcnn.cc,l:499,c:42
+
+ki                    33 (28:FALSE)    --              FALSE  qcnn.cc,l:502,c:46
+
+kj                    37 (31:FALSE)    --              FALSE  qcnn.cc,l:504,c:50 -> c:53
+
+img                   37 (31:FALSE)    --              FALSE  qcnn.cc,l:25,c:13 -> l:502,c:37
+
+acc                   37 (31:FALSE)    --              FALSE  qcnn.cc,l:499,c:42 -> l:502,c:37
+
+ki                    37 (31:FALSE)    --              FALSE  qcnn.cc,l:502,c:46 -> c:67
+
+conv1_weight          37 (31:FALSE)    --              FALSE  qcnn.cc,l:26,c:26 -> l:502,c:37
+
+img                   39 (32:FALSE)    --              FALSE  qcnn.cc,l:25,c:13 -> l:510,c:77
+
+acc                   39 (32:FALSE)    --              FALSE  qcnn.cc,l:499,c:42 -> l:508,c:45
+
+kj                    39 (32:FALSE)    --              FALSE  qcnn.cc,l:504,c:50 -> c:71
+
+conv1_weight          39 (32:FALSE)    --              FALSE  qcnn.cc,l:26,c:26 -> l:510,c:118
+
+                      41 (32:TRUE)     --              FALSE  f:qcnn.cc,l:504,c:73
+
+f:qcnn.cc,l:506,c:63  43 (32:TRUE)     --              FALSE  & c:56
+
+f:qcnn.cc,l:507,c:63  45 (32:TRUE)     --              FALSE  & c:56
+
+                      47 (32:TRUE)     --              FALSE  f:qcnn.cc,l:506,c:61
+
+f:qcnn.cc,l:508,c:65  47 (32:TRUE)     --              FALSE  & c:63
+
+                      49 (32:TRUE)     --              FALSE  f:qcnn.cc,l:507,c:61
+
+                      49 (32:TRUE)     --              FALSE  f:qcnn.cc,l:508,c:71
+
+f:qcnn.cc,l:508,c:90  49 (32:TRUE)     --              FALSE  & c:88
+
+                      49 (32:TRUE)     --              FALSE  f:qcnn.cc,l:508,c:71
+
+                      49 (32:TRUE)     --              FALSE  f:qcnn.cc,l:508,c:57
+
+                      49 (32:TRUE)     --              FALSE  f:qcnn.cc,l:508,c:82
+
+conv1_weight          51 (32:TRUE)     --              FALSE  qcnn.cc,l:26,c:26 -> l:510,c:118
+
+conv1_weight          51 (32:TRUE)     --              FALSE  qcnn.cc,l:26,c:26 -> l:510,c:118
+
+conv1_weight          53 (32:TRUE)     --              FALSE  qcnn.cc,l:26,c:26 -> l:510,c:118
+
+conv1_weight          53 (32:TRUE)     --              FALSE  qcnn.cc,l:26,c:26 -> l:510,c:118
+
+f:qcnn.cc,l:504,c:63  55 (32:TRUE)     --              FALSE  & c:61
+
+img                   55 (32:TRUE)     --              FALSE  qcnn.cc,l:25,c:13 -> l:510,c:77
+
+img                   55 (32:TRUE)     --              FALSE  qcnn.cc,l:25,c:13 -> l:510,c:77
+
+conv1_weight          57 (32:TRUE)     --              FALSE  qcnn.cc,l:26,c:26 -> l:510,c:118
+
+img                   57 (32:TRUE)     --              FALSE  qcnn.cc,l:25,c:13 -> l:510,c:77
+
+                      57 (32:TRUE)     --              FALSE  f:qcnn.cc,l:510,c:82
+
+operator+=            57 (32:TRUE)     --              FALSE  qcnn.cc,l:510,c:53 & l:508,c:45
+
+operator+=            57 (32:TRUE)     --              FALSE  qcnn.cc,l:510,c:53
+
+                      60 (34:FALSE)    --              FALSE  f:qcnn.cc,l:502,c:69
+
+f:qcnn.cc,l:502,c:59  60 (34:FALSE)    --              FALSE  & c:57
+
+f:qcnn.cc,l:515,c:46  65 (36:TRUE)     --              FALSE  & c:44
+
+                      65 (36:TRUE)     --              FALSE  f:qcnn.cc,l:516,c:41
+
+                      65 (36:TRUE)     --              FALSE  f:qcnn.cc,l:516,c:41
+
+f:qcnn.cc,l:517,c:43  65 (36:TRUE)     --              FALSE  & operator= @c:41 & l:516,c:33
+
+f:qcnn.cc,l:518,c:43  65 (36:TRUE)     --              FALSE  & c:41
+
+f:qcnn.cc,l:519,c:43  65 (36:TRUE)     --              FALSE  & operator= @c:41 & l:518,c:33
+
+operator>             65 (36:TRUE)     --              FALSE  qcnn.cc,l:521,c:41
+
+operator=             65 (36:TRUE)     --              FALSE  qcnn.cc,l:522,c:45 & l:521,c:33
+
+f:qcnn.cc,l:497,c:43  64 (29:TRUE)     --              FALSE  & max_val @l:490,c:29
+
+                      66 (37:FALSE)    --              FALSE  f:qcnn.cc,l:493,c:76
+
+f:qcnn.cc,l:493,c:61  66 (37:FALSE)    --              FALSE  & c:59
+
+                      68 (39:FALSE)    --              FALSE  f:qcnn.cc,l:491,c:72
+
+f:qcnn.cc,l:491,c:57  69 (39:TRUE)     --              FALSE  & c:55
+
+                      71 (41:FALSE)    --              FALSE  f:qcnn.cc,l:486,c:51
+
+block1_out            71 (41:FALSE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:526,c:39
+
+block1_out            71 (41:FALSE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:526,c:39
+
+                      72 (41:TRUE)     --              FALSE  f:qcnn.cc,l:488,c:55
+
+f:qcnn.cc,l:486,c:35  72 (41:TRUE)     --              FALSE  & c:33
+
+block1_out            72 (41:TRUE)     --              FALSE  qcnn.cc,l:482,c:17 -> l:526,c:39
+
+block1_out            72 (41:TRUE)     --              FALSE  qcnn.cc,l:482,c:17 -> l:526,c:39
+
+f:qcnn.cc,l:488,c:39  73 (41:TRUE)     --              FALSE  & c:37
+
+block1_out            73 (41:TRUE)     --              FALSE  qcnn.cc,l:482,c:17 -> l:526,c:39
+
+f:qcnn.cc,l:484,c:31  73 (41:TRUE)     --              FALSE  & c:29
+
+oc                    73 (41:TRUE)     --              FALSE  qcnn.cc,l:534,c:18 -> c:21
+
+pi                    80 (48:FALSE)    --              FALSE  qcnn.cc,l:536,c:22 -> c:25
+
+block1_out            80 (48:FALSE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:534,c:9
+
+block2_out            80 (48:FALSE)    --              FALSE  qcnn.cc,l:533,c:17 -> l:534,c:9
+
+oc                    80 (48:FALSE)    --              FALSE  qcnn.cc,l:534,c:18 -> c:45
+
+conv2_weight          80 (48:FALSE)    --              FALSE  qcnn.cc,l:51,c:26 -> l:534,c:9
+
+                      80 (48:FALSE)    --              FALSE  f:qcnn.cc,l:534,c:47
+
+pj                    81 (49:FALSE)    --              FALSE  qcnn.cc,l:538,c:26 -> c:29
+
+block1_out            81 (49:FALSE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:536,c:13
+
+block2_out            81 (49:FALSE)    --              FALSE  qcnn.cc,l:533,c:17 -> l:536,c:13
+
+pi                    81 (49:FALSE)    --              FALSE  qcnn.cc,l:536,c:22 -> c:56
+
+conv2_weight          81 (49:FALSE)    --              FALSE  qcnn.cc,l:51,c:26 -> l:536,c:13
+
+pi_offset             82 (50:FALSE)    --              FALSE  qcnn.cc,l:541,c:30 -> c:40
+
+max_val               82 (50:FALSE)    --              FALSE  qcnn.cc,l:540,c:29
+
+block1_out            82 (50:FALSE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:538,c:17
+
+block2_out            82 (50:FALSE)    --              FALSE  qcnn.cc,l:533,c:17 -> l:576,c:39
+
+pj                    82 (50:FALSE)    --              FALSE  qcnn.cc,l:538,c:26 -> c:60
+
+conv2_weight          82 (50:FALSE)    --              FALSE  qcnn.cc,l:51,c:26 -> l:538,c:17
+
+pj_offset             83 (51:FALSE)    --              FALSE  qcnn.cc,l:543,c:34 -> c:44
+
+block1_out            83 (51:FALSE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:541,c:21
+
+max_val               83 (51:FALSE)    --              FALSE  qcnn.cc,l:540,c:29 -> l:541,c:21
+
+pi_offset             83 (51:FALSE)    --              FALSE  qcnn.cc,l:541,c:30 -> c:63
+
+conv2_weight          83 (51:FALSE)    --              FALSE  qcnn.cc,l:51,c:26 -> l:541,c:21
+
+i                     83 (51:FALSE)    --              FALSE  qcnn.cc,l:545,c:33 -> c:35
+
+f:qcnn.cc,l:547,c:37  83 (51:FALSE)    --              FALSE  & c:35
+
+block1_out            84 (52:FALSE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:543,c:25
+
+max_val               84 (52:FALSE)    --              FALSE  qcnn.cc,l:540,c:29 -> l:571,c:33
+
+pj_offset             84 (52:FALSE)    --              FALSE  qcnn.cc,l:543,c:34 -> c:67
+
+conv2_weight          84 (52:FALSE)    --              FALSE  qcnn.cc,l:51,c:26 -> l:543,c:25
+
+j                     84 (52:FALSE)    --              FALSE  qcnn.cc,l:546,c:33 -> c:35
+
+f:qcnn.cc,l:547,c:57  84 (52:FALSE)    --              FALSE  & c:55
+
+                      84 (52:FALSE)    --              FALSE  f:qcnn.cc,l:547,c:50
+
+acc                   84 (52:FALSE)    --              FALSE  qcnn.cc,l:549,c:42
+
+ic                    84 (52:FALSE)    --              FALSE  qcnn.cc,l:550,c:42
+
+ki                    88 (55:FALSE)    --              FALSE  qcnn.cc,l:552,c:46 -> c:49
+
+block1_out            88 (55:FALSE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:550,c:33
+
+acc                   88 (55:FALSE)    --              FALSE  qcnn.cc,l:549,c:42 -> l:550,c:33
+
+ic                    88 (55:FALSE)    --              FALSE  qcnn.cc,l:550,c:42 -> c:69
+
+conv2_weight          88 (55:FALSE)    --              FALSE  qcnn.cc,l:51,c:26 -> l:550,c:33
+
+kj                    90 (56:FALSE)    --              FALSE  qcnn.cc,l:554,c:50 -> c:53
+
+block1_out            90 (56:FALSE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:552,c:37
+
+acc                   90 (56:FALSE)    --              FALSE  qcnn.cc,l:549,c:42 -> l:552,c:37
+
+ki                    90 (56:FALSE)    --              FALSE  qcnn.cc,l:552,c:46 -> c:67
+
+conv2_weight          90 (56:FALSE)    --              FALSE  qcnn.cc,l:51,c:26 -> l:552,c:37
+
+block1_out            92 (57:FALSE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:560,c:84
+
+acc                   92 (57:FALSE)    --              FALSE  qcnn.cc,l:549,c:42 -> l:558,c:45
+
+kj                    92 (57:FALSE)    --              FALSE  qcnn.cc,l:554,c:50 -> c:71
+
+conv2_weight          92 (57:FALSE)    --              FALSE  qcnn.cc,l:51,c:26 -> l:560,c:125
+
+f:qcnn.cc,l:556,c:63  94 (57:TRUE)     --              FALSE  & c:56
+
+f:qcnn.cc,l:557,c:63  96 (57:TRUE)     --              FALSE  & c:56
+
+                      98 (57:TRUE)     --              FALSE  f:qcnn.cc,l:556,c:61
+
+f:qcnn.cc,l:558,c:65  98 (57:TRUE)     --              FALSE  & c:63
+
+                      100 (57:TRUE)    --              FALSE  f:qcnn.cc,l:557,c:61
+
+                      100 (57:TRUE)    --              FALSE  f:qcnn.cc,l:558,c:78
+
+f:qcnn.cc,l:558,c:97  100 (57:TRUE)    --              FALSE  & c:95
+
+                      100 (57:TRUE)    --              FALSE  f:qcnn.cc,l:558,c:78
+
+                      100 (57:TRUE)    --              FALSE  f:qcnn.cc,l:558,c:57
+
+                      100 (57:TRUE)    --              FALSE  f:qcnn.cc,l:558,c:89
+
+conv2_weight          102 (57:TRUE)    --              FALSE  qcnn.cc,l:51,c:26 -> l:560,c:125
+
+conv2_weight          102 (57:TRUE)    --              FALSE  qcnn.cc,l:51,c:26 -> l:560,c:125
+
+block1_out            104 (57:TRUE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:560,c:84
+
+block1_out            104 (57:TRUE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:560,c:84
+
+f:qcnn.cc,l:534,c:31  105 (53:TRUE)    --              FALSE  & c:29
+
+                      106 (57:TRUE)    --              FALSE  f:qcnn.cc,l:554,c:73
+
+conv2_weight          106 (57:TRUE)    --              FALSE  qcnn.cc,l:51,c:26 -> l:560,c:125
+
+conv2_weight          106 (57:TRUE)    --              FALSE  qcnn.cc,l:51,c:26 -> l:560,c:125
+
+f:qcnn.cc,l:554,c:63  108 (57:TRUE)    --              FALSE  & c:61
+
+block1_out            108 (57:TRUE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:560,c:84
+
+block1_out            108 (57:TRUE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:560,c:84
+
+conv2_weight          108 (57:TRUE)    --              FALSE  qcnn.cc,l:51,c:26 -> l:560,c:125
+
+block1_out            110 (57:TRUE)    --              FALSE  qcnn.cc,l:482,c:17 -> l:560,c:84
+
+                      110 (57:TRUE)    --              FALSE  f:qcnn.cc,l:560,c:89
+
+operator+=            110 (57:TRUE)    --              FALSE  qcnn.cc,l:560,c:53 & l:558,c:45
+
+operator+=            110 (57:TRUE)    --              FALSE  qcnn.cc,l:560,c:53
+
+                      113 (59:FALSE)   --              FALSE  f:qcnn.cc,l:552,c:69
+
+f:qcnn.cc,l:552,c:59  113 (59:FALSE)   --              FALSE  & c:57
+
+                      118 (61:TRUE)    --              FALSE  f:qcnn.cc,l:550,c:71
+
+f:qcnn.cc,l:550,c:55  118 (61:TRUE)    --              FALSE  & c:53
+
+                      119 (53:FALSE)   --              FALSE  f:qcnn.cc,l:543,c:76
+
+f:qcnn.cc,l:565,c:46  121 (63:FALSE)   --              FALSE  & c:44
+
+                      121 (63:FALSE)   --              FALSE  f:qcnn.cc,l:566,c:41
+
+                      121 (63:FALSE)   --              FALSE  f:qcnn.cc,l:566,c:41
+
+f:qcnn.cc,l:567,c:43  121 (63:FALSE)   --              FALSE  & operator= @c:41 & l:566,c:33
+
+f:qcnn.cc,l:568,c:43  121 (63:FALSE)   --              FALSE  & c:41
+
+f:qcnn.cc,l:569,c:43  121 (63:FALSE)   --              FALSE  & operator= @c:41 & l:568,c:33
+
+operator>             121 (63:FALSE)   --              FALSE  qcnn.cc,l:571,c:41
+
+operator=             121 (63:FALSE)   --              FALSE  qcnn.cc,l:572,c:45 & l:571,c:33
+
+f:qcnn.cc,l:547,c:50  119 (53:FALSE)   --              FALSE  & max_val @l:540,c:29
+
+f:qcnn.cc,l:543,c:61  122 (64:TRUE)    --              FALSE  & c:59
+
+                      124 (66:FALSE)   --              FALSE  f:qcnn.cc,l:541,c:72
+
+f:qcnn.cc,l:541,c:57  125 (66:TRUE)    --              FALSE  & c:55
+
+block2_out            127 (68:FALSE)   --              FALSE  qcnn.cc,l:533,c:17 -> l:576,c:39
+
+block2_out            127 (68:FALSE)   --              FALSE  qcnn.cc,l:533,c:17 -> l:576,c:39
+
+                      128 (68:TRUE)    --              FALSE  f:qcnn.cc,l:538,c:62
+
+block2_out            128 (68:TRUE)    --              FALSE  qcnn.cc,l:533,c:17 -> l:576,c:39
+
+f:qcnn.cc,l:538,c:39  128 (68:TRUE)    --              FALSE  & c:37
+
+block2_out            128 (68:TRUE)    --              FALSE  qcnn.cc,l:533,c:17 -> l:576,c:39
+
+block2_out            129 (68:TRUE)    --              FALSE  qcnn.cc,l:533,c:17 -> l:576,c:39
+
+o                     129 (68:TRUE)    --              FALSE  qcnn.cc,l:585,c:18 -> c:20
+
+                      131 (70:FALSE)   --              FALSE  f:qcnn.cc,l:536,c:58
+
+f:qcnn.cc,l:536,c:35  131 (70:FALSE)   --              FALSE  & c:33
+
+c                     136 (75:FALSE)   --              FALSE  qcnn.cc,l:588,c:22 -> c:24
+
+acc                   136 (75:FALSE)   --              FALSE  qcnn.cc,l:587,c:22
+
+block2_out            136 (75:FALSE)   --              FALSE  qcnn.cc,l:533,c:17 -> l:585,c:9
+
+fc1_out               136 (75:FALSE)   --              FALSE  qcnn.cc,l:583,c:17 -> l:603,c:20
+
+o                     136 (75:FALSE)   --              FALSE  qcnn.cc,l:585,c:18 -> c:38
+
+fc1_weight            136 (75:FALSE)   --              FALSE  qcnn.cc,l:436,c:26 -> l:585,c:9
+
+i                     137 (76:FALSE)   --              FALSE  qcnn.cc,l:590,c:26 -> c:28
+
+block2_out            137 (76:FALSE)   --              FALSE  qcnn.cc,l:533,c:17 -> l:588,c:13
+
+acc                   137 (76:FALSE)   --              FALSE  qcnn.cc,l:587,c:22 -> l:588,c:13
+
+c                     137 (76:FALSE)   --              FALSE  qcnn.cc,l:588,c:22 -> c:47
+
+fc1_weight            137 (76:FALSE)   --              FALSE  qcnn.cc,l:436,c:26 -> l:588,c:13
+
+j                     138 (77:FALSE)   --              FALSE  qcnn.cc,l:592,c:30 -> c:32
+
+block2_out            138 (77:FALSE)   --              FALSE  qcnn.cc,l:533,c:17 -> l:590,c:17
+
+acc                   138 (77:FALSE)   --              FALSE  qcnn.cc,l:587,c:22 -> l:590,c:17
+
+i                     138 (77:FALSE)   --              FALSE  qcnn.cc,l:590,c:26 -> c:57
+
+fc1_weight            138 (77:FALSE)   --              FALSE  qcnn.cc,l:436,c:26 -> l:590,c:17
+
+block2_out            139 (78:FALSE)   --              FALSE  qcnn.cc,l:533,c:17 -> l:594,c:58
+
+acc                   139 (78:FALSE)   --              FALSE  qcnn.cc,l:587,c:22 -> l:594,c:25
+
+j                     139 (78:FALSE)   --              FALSE  qcnn.cc,l:592,c:30 -> c:61
+
+fc1_weight            139 (78:FALSE)   --              FALSE  qcnn.cc,l:436,c:26 -> l:594,c:87
+
+f:qcnn.cc,l:594,c:96  140 (78:TRUE)    --              FALSE  & c:94
+
+                      140 (78:TRUE)    --              FALSE  f:qcnn.cc,l:594,c:102
+
+block2_out            141 (78:TRUE)    --              FALSE  qcnn.cc,l:533,c:17 -> l:594,c:58
+
+                      141 (78:TRUE)    --              FALSE  f:qcnn.cc,l:590,c:58
+
+block2_out            141 (78:TRUE)    --              FALSE  qcnn.cc,l:533,c:17 -> l:594,c:58
+
+fc1_weight            142 (78:TRUE)    --              FALSE  qcnn.cc,l:436,c:26 -> l:594,c:87
+
+                      142 (78:TRUE)    --              FALSE  f:qcnn.cc,l:588,c:48
+
+                      142 (78:TRUE)    --              FALSE  f:qcnn.cc,l:592,c:62
+
+f:qcnn.cc,l:594,c:12  142 (78:TRUE)    --              FALSE  & c:119
+
+                      142 (78:TRUE)    --              FALSE  f:qcnn.cc,l:594,c:115
+
+f:qcnn.cc,l:592,c:41  143 (78:TRUE)    --              FALSE  & c:39
+
+f:qcnn.cc,l:594,c:14  143 (78:TRUE)    --              FALSE  & c:140
+
+fc1_weight            143 (78:TRUE)    --              FALSE  qcnn.cc,l:436,c:26 -> l:594,c:87
+
+f:qcnn.cc,l:590,c:37  144 (78:TRUE)    --              FALSE  & c:35
+
+block2_out            144 (78:TRUE)    --              FALSE  qcnn.cc,l:533,c:17 -> l:594,c:58
+
+block2_out            144 (78:TRUE)    --              FALSE  qcnn.cc,l:533,c:17 -> l:594,c:58
+
+fc1_weight            144 (78:TRUE)    --              FALSE  qcnn.cc,l:436,c:26 -> l:594,c:87
+
+block2_out            145 (78:TRUE)    --              FALSE  qcnn.cc,l:533,c:17 -> l:594,c:58
+
+                      145 (78:TRUE)    --              FALSE  f:qcnn.cc,l:594,c:62
+
+operator+=            145 (78:TRUE)    --              FALSE  qcnn.cc,l:594,c:29
+
+f:qcnn.cc,l:588,c:33  145 (78:TRUE)    --              FALSE  & c:31
+
+                      152 (84:TRUE)    --              FALSE  f:qcnn.cc,l:585,c:39
+
+f:qcnn.cc,l:598,c:26  152 (84:TRUE)    --              FALSE  & c:24
+
+                      152 (84:TRUE)    --              FALSE  f:qcnn.cc,l:599,c:21
+
+                      152 (84:TRUE)    --              FALSE  f:qcnn.cc,l:599,c:21
+
+f:qcnn.cc,l:600,c:23  152 (84:TRUE)    --              FALSE  & operator= @c:21 & l:599,c:13
+
+f:qcnn.cc,l:601,c:23  152 (84:TRUE)    --              FALSE  & c:21
+
+f:qcnn.cc,l:602,c:23  152 (84:TRUE)    --              FALSE  & operator= @c:21 & l:601,c:13
+
+f:qcnn.cc,l:585,c:29  153 (84:TRUE)    --              FALSE  & c:27
+
+fc1_out               153 (84:TRUE)    --              FALSE  qcnn.cc,l:583,c:17 -> l:603,c:20
+
+i                     156 (86:TRUE)    --              FALSE  qcnn.cc,l:611,c:18 -> c:20
+
+prediction            156 (86:TRUE)    --              FALSE  qcnn.cc,l:609,c:18
+
+fc1_out               156 (86:TRUE)    --              FALSE  qcnn.cc,l:583,c:17 -> l:610,c:34
+
+fc1_out               157 (87:FALSE)   --              FALSE  qcnn.cc,l:583,c:17 -> l:613,c:24
+
+prediction            157 (87:FALSE)   --              FALSE  qcnn.cc,l:609,c:18 -> l:613,c:13
+
+max_val               157 (87:FALSE)   --              FALSE  qcnn.cc,l:610,c:17 -> l:613,c:13
+
+i                     157 (87:FALSE)   --              FALSE  qcnn.cc,l:611,c:18 -> c:38
+
+                      157 (87:FALSE)   --              FALSE  f:qcnn.cc,l:611,c:39
+
+f:qcnn.cc,l:611,c:29  158 (87:TRUE)    --              FALSE  & c:27
+
+fc1_out               158 (87:TRUE)    --              FALSE  qcnn.cc,l:583,c:17
+
+operator>             158 (87:TRUE)    --              FALSE  qcnn.cc,l:613,c:28
+
+operator=             158 (87:TRUE)    --              FALSE  qcnn.cc,l:616,c:28 & l:613,c:13
+
+operator=             158 (87:TRUE)    --              FALSE  qcnn.cc,l:615,c:25 & l:613,c:13
+
+outvalid              160 (89:FALSE)   --              FALSE  qcnn.h,l:14,c:18 -> f:qcnn.cc,l:623,c:13
+
+outdata               160 (89:FALSE)   --              FALSE  qcnn.h,l:15,c:22 -> f:qcnn.cc,l:624,c:13
+
+outvalid              161 (90:TRUE)    --              FALSE  qcnn.h,l:14,c:18 -> f:qcnn.cc,l:626,c:13
+
+

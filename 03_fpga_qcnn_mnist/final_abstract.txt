@@ -1,0 +1,16 @@
+# Title
+
+Lightweight CNN Implementation for MNIST Digit Classification
+
+# Abstract
+
+In this project, I implemented a lightweight CNN used for handwritten digit recognition (MNIST) on an FPGA for the purpose of high-speed processing in IoT systems.
+While CNNs have high recognition performance, the computational complexity of convlution operations is inormous, and inference on a cPU requires a long processing time. In this project, I trained a CNN model using 8-bit quantization using Quantization Aware Training (QAT) and implemented its parameters on an FPGA.
+The FPGA implementation was peformed on a Terasic DE2-115 (Cyclone IV E) board, and RTL design was performed using Verilog HDL. Performance was evaluated through both simulation and actual device verification, and a speed-up was confirmed compared to CPU execution.
+
+
+# Performance Improvement
+
+・CPU execution (Core i7-13700KF, O3 optimization): 15 µs/image
+・FPGA simulation: 7.8 µs/image (−48% reduction, ~2× speedup)
+・FPGA actual device: 12.2 µs/image (−19% reduction, ~1.2× speedup)

@@ -1,0 +1,36 @@
+# VSCode
+**/.vscode/
+
+# MNIST / generated inputs
+**/mnist_inputs_hex_split/
+**/export_hw_fixed_halfup_rowmajor/*.npy
+
+# export_4bit_asic
+**/export_4bit_asic/inputs/
+
+# Cadence / Vivado / FPGA working directories
+**/cadsv/
+**/fpga/
+**/fpga_rom/
+**/fpga_rom_emb/
+
+# Vivado / Cadence logs & databases
+**/*.jou
+**/*.log
+**/*.wdb
+**/*.wdf
+**/*.lpr
+**/fpga/**/*.db
+**/cadsv/**/*.db
+
+# Generated binaries
+**/*.exe
+**/*.a
+
+# Generated archives (safe)
+**/export_*.zip
+
+# Documents / slides (optional)
+**/*.pptx
+**/*.pdf
+**/*.docx

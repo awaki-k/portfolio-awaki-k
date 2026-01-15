@@ -1,0 +1,5 @@
+// Auto-generated ROM table for fc3 bias (16-bit)
+// Width: 16 bits * 32 lanes = 512 bits
+// addr -> rd_data (one 32-lane vector per address)
+
+        0: rd_data = 512'h0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100010002ffff00000000ffff;

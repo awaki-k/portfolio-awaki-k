@@ -1,0 +1,74 @@
+{
+  "fc1": {
+    "name": "fc1",
+    "w_shape": [
+      64,
+      784
+    ],
+    "w_scale": 0.005014019086956978,
+    "w_zero_point": 0,
+    "b_shape": [
+      64
+    ],
+    "in_scale": 0.00392156862745098,
+    "in_zero_point": 0,
+    "out_scale": 0.04981415346264839,
+    "out_zero_point": 0,
+    "eff_scale": 0.0003947235591104535,
+    "requant_s": 423831,
+    "requant_shift": 30,
+    "in_features": 784,
+    "out_features": 64,
+    "is_relu_fused": true,
+    "rounding": "half_up",
+    "export_layout": "row_major_no_padding"
+  },
+  "fc2": {
+    "name": "fc2",
+    "w_shape": [
+      32,
+      64
+    ],
+    "w_scale": 0.004850692581385374,
+    "w_zero_point": 0,
+    "b_shape": [
+      32
+    ],
+    "in_scale": 0.04981415346264839,
+    "in_zero_point": 0,
+    "out_scale": 0.07133938372135162,
+    "out_zero_point": 0,
+    "eff_scale": 0.003387093244217936,
+    "requant_s": 3636864,
+    "requant_shift": 30,
+    "in_features": 64,
+    "out_features": 32,
+    "is_relu_fused": true,
+    "rounding": "half_up",
+    "export_layout": "row_major_no_padding"
+  },
+  "fc3": {
+    "name": "fc3",
+    "w_shape": [
+      10,
+      32
+    ],
+    "w_scale": 0.00539338169619441,
+    "w_zero_point": 0,
+    "b_shape": [
+      10
+    ],
+    "in_scale": 0.07133938372135162,
+    "in_zero_point": 0,
+    "out_scale": 0.17466123402118683,
+    "out_zero_point": 155,
+    "eff_scale": 0.002202895957633363,
+    "requant_s": 2365342,
+    "requant_shift": 30,
+    "in_features": 32,
+    "out_features": 10,
+    "is_relu_fused": false,
+    "rounding": "half_up",
+    "export_layout": "row_major_no_padding"
+  }
+}

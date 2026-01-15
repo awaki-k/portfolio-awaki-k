@@ -1,0 +1,83 @@
+// ------------------------------------------------------------
+// （共通で使っているなら既存の clog2 を使ってOK）
+// ------------------------------------------------------------
+function integer clog2;
+    input integer v;
+    integer i;
+    begin
+        v = v - 1;
+        for (i = 0; v > 0; i = i + 1)
+            v = v >> 1;
+        clog2 = (i < 1) ? 1 : i;
+    end
+endfunction
+
+// ------------------------------------------------------------
+// ring_fifo_rom テンプレート
+//   - WIDTH: 1 サイクルで出すビット幅（例: 8*32=256）
+//   - DEPTH: アドレス数（例: 28*28*2=1568）
+//   - Python で「0～DEPTH-1」の case 行を生成して、
+//     AUTO-GENERATED のところに貼るだけ
+// ------------------------------------------------------------
+module ring_fifo_rom #(
+    parameter integer WIDTH = 256,
+    parameter integer DEPTH = 1024
+)(
+    input  wire             clk,
+    input  wire             reset,
+    input  wire             rd_en,
+    output reg  [WIDTH-1:0] rd_data,
+    output reg              rd_valid
+);
+
+    localparam integer AW = clog2(DEPTH);
+
+    // 実際に ROM を引くアドレス（FIFO の「今読む位置」）
+    reg [AW-1:0] addr;
+    // 次の読み位置（リングバッファのポインタ）
+    reg [AW-1:0] rptr;
+
+    // リング用インクリメント
+    function [AW-1:0] inc_ptr;
+        input [AW-1:0] p;
+        begin
+            inc_ptr = (p == DEPTH-1) ? {AW{1'b0}} : (p + 1'b1);
+        end
+    endfunction
+
+    // ポインタ & valid 制御
+    //  - 初回 rd_en=1 のサイクルで addr=0 が出るようにしてある
+    always @(posedge clk) begin
+        if (reset) begin
+            addr     <= {AW{1'b0}};
+            rptr     <= {AW{1'b0}};
+            rd_valid <= 1'b0;
+        end else begin
+            if (rd_en) begin
+                addr     <= rptr;          // 今の rptr をこのサイクルで使う
+                rptr     <= inc_ptr(rptr); // 次の位置へ進めておく
+                rd_valid <= 1'b1;
+            end else begin
+                rd_valid <= 1'b0;
+            end
+        end
+    end
+
+    // ROM 本体（ここに Python 生成の case 文を貼る）
+    always @* begin
+        case (addr)
+            // =================================================
+            // AUTO-GENERATED ROM DATA BEGIN
+            // =================================================
+
+            // ★ここに Python の出力を丸ごとコピペ ★
+
+
+            // =================================================
+            // AUTO-GENERATED ROM DATA END
+            // =================================================
+            default: rd_data = {WIDTH{1'b0}};
+        endcase
+    end
+
+endmodule

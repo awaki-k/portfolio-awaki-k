@@ -1,0 +1,29 @@
+{
+  "fc1": {
+    "w_shape": [
+      32,
+      196
+    ],
+    "rq_scale_int12": 396,
+    "rq_shift_uint4": 15,
+    "out_zp": 0
+  },
+  "fc2": {
+    "w_shape": [
+      16,
+      32
+    ],
+    "rq_scale_int12": 1234,
+    "rq_shift_uint4": 14,
+    "out_zp": 0
+  },
+  "fc3": {
+    "w_shape": [
+      10,
+      16
+    ],
+    "rq_scale_int12": 1241,
+    "rq_shift_uint4": 15,
+    "out_zp": 10
+  }
+}
